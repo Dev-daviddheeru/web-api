@@ -113,7 +113,7 @@ router.post('/login', (req, res, next)=>{
    })
 })
 
-router.put('/:id', (req, res, next)=>{
+router.put('/:id',checkauth, (req, res, next)=>{
     User.findOneAndUpdate({_id:req.params.id},{
         $set:{
         userName:req.body.userName,
@@ -135,7 +135,7 @@ router.put('/:id', (req, res, next)=>{
     })
 })
 
-router.delete('/:id', (req, res, next)=>{
+router.delete('/:id',checkauth, (req, res, next)=>{
     User.remove({_id:req.params.id})
     .then(result=>{
         res.status(200).json({
