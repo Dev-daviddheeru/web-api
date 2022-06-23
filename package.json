@@ -1,0 +1,31 @@
+{
+  "name": "restapi",
+  "version": "1.0.0",
+  "description": "restapi",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js -p 3000",
+    "start": "node server.js -p $PORT",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=14.17.6",
+    "npm": ">=6.14.15"
+  },
+  "keywords": [
+    "restapi",
+    "api"
+  ],
+  "author": "Dheerendra",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "cloudinary": "^1.30.0",
+    "express": "^4.18.1",
+    "express-fileupload": "^1.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.6",
+    "nodemon": "^2.0.16"
+  }
+}
